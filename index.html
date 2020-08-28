@@ -1,11 +1,482 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>谷粒学院</title>
+    <link crossorigin='anonymous' href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/holder/2.9.7/holder.js"></script>
+    <style>
+        .col-lg-20 {
+            width: 20%;
+            padding: 0 10px;
+            float: left;
+        }
+
+        .m-row {
+            margin: 0 -10px;
+        }
+
+        .bottom-links {
+            background: #333;
+            padding:40px;
+        }
+
+        .bottom-links a {
+            color: white;
+        }
+
+        .bottom-links dt{
+            font-size:20px;
+            padding-bottom:10px;
+        }
+
+        .gap{
+            height:10px;
+        }
+        .copyright{
+            background: #222;
+            color:white;
+            padding:30px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>hello</h1>
+    <!-- 顶部导航 start -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- 小屏幕下显示的菜单元素 -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- 商标位置 -->
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- 顶部左侧导航 -->
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">谷粒学院</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">前端 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">jQuery</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Vue</a></li>
+                            <li><a href="#">React</a></li>
+                            <li><a href="#">Angular</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">后端 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">NodeJS</a></li>
+                            <li><a href="#">Mongodb</a></li>
+                            <li><a href="#">MySQL</a></li>
+                            <li><a href="#">Linux</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--中间的搜索表单 -->
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="关键字">
+                    </div>
+                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"
+                            aria-hidden="true"></span></button>
+                </form>
+                <!-- 顶部右侧的导航 -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">站内信 <span class="badge">42</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">个人中心 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">我的课程</a></li>
+                            <li><a href="#">学习记录</a></li>
+                            <li><a href="#">我的优惠券</a></li>
+                            <li><a href="#">我的成就</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- 顶部导航 end -->
+
+    <!-- 内容区 start -->
+    <div class="container">
+        <!-- 提醒框 start -->
+        <div class="alert alert-success" role="alert">
+            <strong>干得漂亮 !</strong> 恭喜您已经注册成功!!!
+        </div>
+        <!-- 提醒框 end -->
+
+        <!-- 巨幕广告 start -->
+        <div class="jumbotron">
+            <h2>尚硅谷全套视频教程</h2>
+            <p>沉浸在知识的海洋，欲罢不能！</p>
+            <p><a class="btn btn-primary btn-md" href="#" role="button">立即起航</a></p>
+        </div>
+        <!-- 巨幕广告 end -->
+
+        <!-- 路径导航 start -->
+        <ol class="breadcrumb">
+            <li><a class="h4" href="#">首页</a></li>
+            <li class="active">热门课程</li>
+        </ol>
+        <!-- 路径导航 end -->
+        <!-- 热门课程 start -->
+        <div class="row hot-courses">
+            <!-- 单个的课程结构 start -->
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#bef">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+            </div>
+            <!-- 单个的课程结构 end -->
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#bef">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#bef">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#bef">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+            </div>
+            <!-- 单个的课程结构 start -->
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#bef">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+            </div>
+            <!-- 单个的课程结构 end -->
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#bef">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#bef">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#bef">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 热门课程 end -->
+
+        <!-- 路径导航 start -->
+        <ol class="breadcrumb">
+            <li><a class="h4" href="#">首页</a></li>
+            <li class="active">所有课程</li>
+        </ol>
+        <!-- 路径导航 end -->
+        <!-- 所有课程 start -->
+        <div class="m-row">
+            <div class="col-lg-20">
+                <!-- 单个的课程结构 start -->
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#c95">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+                <!-- 单个的课程结构 end -->
+            </div>
+            <div class="col-lg-20">
+                <!-- 单个的课程结构 start -->
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#c95">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+                <!-- 单个的课程结构 end -->
+            </div>
+            <div class="col-lg-20">
+                <!-- 单个的课程结构 start -->
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#c95">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+                <!-- 单个的课程结构 end -->
+            </div>
+            <div class="col-lg-20">
+                <!-- 单个的课程结构 start -->
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#c95">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+                <!-- 单个的课程结构 end -->
+            </div>
+            <div class="col-lg-20">
+                <!-- 单个的课程结构 start -->
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#c95">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+                <!-- 单个的课程结构 end -->
+            </div>
+            <div class="col-lg-20">
+                <!-- 单个的课程结构 start -->
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#c95">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+                <!-- 单个的课程结构 end -->
+            </div>
+            <div class="col-lg-20">
+                <!-- 单个的课程结构 start -->
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#c95">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+                <!-- 单个的课程结构 end -->
+            </div>
+            <div class="col-lg-20">
+                <!-- 单个的课程结构 start -->
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#c95">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+                <!-- 单个的课程结构 end -->
+            </div>
+            <div class="col-lg-20">
+                <!-- 单个的课程结构 start -->
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#c95">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+                <!-- 单个的课程结构 end -->
+            </div>
+            <div class="col-lg-20">
+                <!-- 单个的课程结构 start -->
+                <div class="thumbnail">
+                    <img data-src="holder.js/100px150?bg=#c95">
+                    <h4>尚硅谷 AJAX 课程</h4>
+                    <p>2020 年新出炉的 AJAX 课程</p>
+                    <p>
+                        <a href="#" class="btn btn-primary btn-xs" role="button">免费</a>
+                        <a href="#" class="btn btn-danger btn-xs" role="button">限时</a>
+                    </p>
+                </div>
+                <!-- 单个的课程结构 end -->
+            </div>
+
+
+        </div>
+        <!-- 分页 -->
+        <nav aria-label="Page navigation" class="pull-right">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 所有课程 end -->
+        <div class="clearfix"></div>
+
+        <!-- 合作企业 start -->
+        <h2 class="page-header">合作企业</h2>
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="holder.js/100px200?bg=#ae9" alt="">
+            </div>
+            <div class="col-lg-3">
+                <img src="holder.js/100px200?bg=#ae9" alt="">
+            </div>
+            <div class="col-lg-3">
+                <img src="holder.js/100px200?bg=#ae9" alt="">
+            </div>
+            <div class="col-lg-3">
+                <img src="holder.js/100px200?bg=#ae9" alt="">
+            </div>
+        </div>
+        <!-- 合作企业 end -->
+
+
+    </div>
+    <!-- 内容区 end -->
+    <div class="gap"></div>
+    <div class="gap"></div>
+    <div class="gap"></div>
+    <!-- 底部的关于企业链接 start -->
+    <div class="container-fluid bottom-links">
+        <div class="container">
+            <div class="col-lg-3 text-center">
+                <dl>
+                    <dt><a href="">新手入门</a></dt>
+                    <dd><a href="">用户注册</a></dd>
+                    <dd><a href="">用户登录</a></dd>
+                    <dd><a href="">找回密码</a></dd>
+                </dl>
+            </div>
+            <div class="col-lg-3 text-center">
+                <dl>
+                    <dt><a href="">新手入门</a></dt>
+                    <dd><a href="">用户注册</a></dd>
+                    <dd><a href="">用户登录</a></dd>
+                    <dd><a href="">找回密码</a></dd>
+                </dl>
+            </div>
+            <div class="col-lg-3 text-center">
+                <dl>
+                    <dt><a href="">新手入门</a></dt>
+                    <dd><a href="">用户注册</a></dd>
+                    <dd><a href="">用户登录</a></dd>
+                    <dd><a href="">找回密码</a></dd>
+                </dl>
+            </div>
+            <div class="col-lg-3 text-center">
+                <dl>
+                    <dt><a href="">新手入门</a></dt>
+                    <dd><a href="">用户注册</a></dd>
+                    <dd><a href="">用户登录</a></dd>
+                    <dd><a href="">找回密码</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!-- 底部的关于企业链接 end -->
+
+    <!-- 底部版权声明 start -->
+    <div class="container-fluid copyright text-center">
+        ©2018课程版权均归谷粒学院所有 京ICP备17055252号
+    </div>
+    <!-- 底部版权声明 end -->
+
+    <script crossorigin="anonymous" src='https://cdn.bootcss.com/jquery/3.5.0/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
